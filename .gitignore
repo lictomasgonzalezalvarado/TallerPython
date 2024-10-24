@@ -1,0 +1,12 @@
+# Archivos de bytecode de Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+.env/
+.idea/
+estrucrudada/Prueba.py
