@@ -1,4 +1,6 @@
 import sys
+from os.path import split
+from os.path import join
 
 if __name__ == "__main__":
     for i in range(10):
@@ -12,9 +14,13 @@ if __name__ == "__main__":
 
     print("--------------------")
     lista={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}
+
     for elemento in lista:
         print(elemento)
 
     lista2 = ["Federico", "Pablo", "Karla"]
-    #la función join se utiliza para
-    print(" ".join(lista2)) #El punto se utiliza para concatenar lo qeu retorne una función.
+    cadena:str=' '.join(lista2)#la función join se utiliza para
+    print(cadena)
+    separado=cadena.split()
+    for dato in separado:
+        print(dato)
