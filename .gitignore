@@ -9,4 +9,8 @@ env/
 .venv/
 .env/
 .idea/
-estructurada/Prueba.py
+1_estructurada/Pruebas.py
+4_basesdedatos/Pruebas.py
+2_estructuradedatos/Pruebas.py
+3_poo/Pruebas.py
+5_programacionfuncional/Pruebas.py
