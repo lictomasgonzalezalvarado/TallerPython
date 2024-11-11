@@ -5,3 +5,5 @@ if __name__ == '__main__':
 
     suma= lambdaSuma (valor1, valor2)
     print(f"La suma de {valor1} y {valor2} es {suma}")
+
+

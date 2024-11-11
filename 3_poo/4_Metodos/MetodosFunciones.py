@@ -1,7 +1,6 @@
 from math import sqrt
 from random import Random
 
-
 class Opercaciones:
     def __init__(self, valor1, valor2, valor3):
         self.a:float= valor1
@@ -18,7 +17,7 @@ class Opercaciones:
         return 4 * self.a * self.c
 
     def Raiz(self):
-        return sqrt(self.Multiplicacion())
+        return sqrt(self.Potencia() - self.Multiplicacion())
 
     def Division(self, x:float,y:float):
         return  x/y
@@ -30,8 +29,7 @@ class Opercaciones:
         return x1,x2 #Se devuelven los valores un una tupla
 
 if __name__ == '__main__':
-    
-    general=Opercaciones(12.5,23.6,55.4)
+    general=Opercaciones(500,1200,-800)
     general.Mensaje()
     x1,x2=general.Res()
     print(f"x1= {x1}")
