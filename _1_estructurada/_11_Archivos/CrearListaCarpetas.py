@@ -9,7 +9,7 @@ from os import walk
 if __name__ == '__main__':
 
     # Establecer la ruta actual
-    ruta_con_archivo=r"F:\Docencia ITSSMT\AGO-DIC 2024\Arq de Comp\TallerPyton\estructurada\\"#path.abspath(__file__)
+    ruta_con_archivo=r"F:\Docencia ITSSMT\AGO-DIC 2024\Arq de Comp\TallerPyton\_1_estructurada\\"#path.abspath(__file__)
     ruta_principal = path.dirname(ruta_con_archivo)
     print(ruta_principal)
 

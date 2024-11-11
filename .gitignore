@@ -9,9 +9,9 @@ env/
 .venv/
 .env/
 .idea/
-1_estructurada/Pruebas.py
-4_basesdedatos/Pruebas.py
-2_estructuradedatos/Pruebas.py
-3_poo/Pruebas.py
-5_programacionfuncional/Pruebas.py
+_1_estructurada/Pruebas.py
+_4_basesdedatos/Pruebas.py
+_2_estructuradedatos/Pruebas.py
+_3_poo/Pruebas.py
+_5_programacionfuncional/Pruebas.py
 CrearCarpetas.py
