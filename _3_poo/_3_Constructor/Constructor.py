@@ -1,16 +1,19 @@
 class Ropa:
-    def __init__(self): #Este es el constructor y no tiene argumentos
-        self.marca = 'Willow' #Estos son los atributos
-        self.talla = 'M'
-        self.color = 'Rojo'
-
-    def __init__(self, marca, talla, color):  # Este es el constructor sobrecargado y tiene  3 argumentos
+    def __init__(self, marca='Willow', talla='M', color='Rojo'):  # Este es el constructor sobrecargado y tiene  3 argumentos
         self.marca = marca
         self.talla = talla
         self.color = color
 
-camisa = Ropa("Panam","G", "Verde") #Esta es la instancia de clase
+    def __str__(self):
+        return self.marca + " - " + self.talla + " - " + self.color
 
-print(camisa.marca)
-print(camisa.talla)
-print(camisa.color)
+    def __del__(self):
+        print('Borrando ',self.__str__())
+
+if __name__ == '__main__':
+    camisa = Ropa("Panam","G", "Verde") #Esta es la instancia de clase
+    camisaGenerica = Ropa()
+
+    print(camisa)
+    del camisa #Eliminando la instancia de clase
+    print(camisaGenerica)
