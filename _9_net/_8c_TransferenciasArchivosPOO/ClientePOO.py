@@ -15,7 +15,7 @@ class ClienteTransferencia:
 
     def enviar(self):
         cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        cliente.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 65536)  # 64 KB para envío
+        cliente.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # 64 KB para envío
         cliente.settimeout(15)
         cliente.connect((self.ip, self.puerto))
         print(f"Conectado al servidor en {self.ip}:{self.puerto}\n\n")
@@ -42,7 +42,7 @@ class ClienteTransferencia:
                         self.total_bytes += len(datos)
                         barra.update(len(datos))  # Actualiza la barra de progreso
 
-                # Enviar contenido del archivo sin el iso de with
+                # Enviar contenido del archivo sin el uso de with
                 # f = open(self.archivo, 'rb')
                 # try:
                 #     while (datos = f.read(1024)):

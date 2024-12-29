@@ -2,7 +2,7 @@ import socket
 import time
 
 class ServidorTransferencia:
-    def __init__(self, ip='0.0.0.0', puerto=65432):
+    def __init__(self, ip='localhost', puerto=65432):
         self.ip = ip
         self.puerto = puerto
         self.tiempo_inicio = 0
@@ -11,7 +11,7 @@ class ServidorTransferencia:
 
     def iniciar(self):
         servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        servidor.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 65536)  # 64 KB para recepción
+        servidor.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR , 1)  # 64 KB para recepción
 
         servidor.bind((self.ip, self.puerto))
         servidor.listen(1)
@@ -26,7 +26,7 @@ class ServidorTransferencia:
         #print(f"Recibiendo archivo: {filename}")
 
         # Recibir contenido del archivo con eluso de with
-        with open("/home/pocoyo/intercambio/adelecover.mp3", 'wb') as f:
+        with open("C:\\Users\\Socrates\\Documents\\Intercambio\\adeleotro.mp3", 'wb') as f:
             while True:
                 datos = conn.recv(65536)
                 if not datos:
