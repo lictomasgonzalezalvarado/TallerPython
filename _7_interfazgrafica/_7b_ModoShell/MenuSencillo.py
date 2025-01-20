@@ -168,9 +168,28 @@ def menu_principal(stdscr):
                     break
 
 
+datos = [['F01C1', 'F01C2', 'F01C3', 'F01C4'],
+         ['F02C1', 'F02C2', 'F02C3', 'F02C4'],
+         ['F03C1', 'F03C2', 'F03C3', 'F03C4'],
+         ['F04C1', 'F04C2', 'F04C3', 'F04C4'],
+         ['F05C1', 'F05C2', 'F05C3', 'F05C4'],
+         ['F06C1', 'F06C2', 'F06C3', 'F06C4'],
+         ['F07C1', 'F07C2', 'F07C3', 'F07C4'],
+         ['F08C1', 'F08C2', 'F08C3', 'F08C4'],
+         ['F09C1', 'F09C2', 'F09C3', 'F09C4'],
+         ['F10C1', 'F10C2', 'F10C3', 'F10C4'],
+         ['F11C1', 'F11C2', 'F11C3', 'F11C4'],
+         ['F12C1', 'F12C2', 'F12C3', 'F12C4'],
+         ['F13C1', 'F13C2', 'F13C3', 'F13C4'],
+         ['F14C1', 'F14C2', 'F14C3', 'F14C4'],
+         ['F15C1', 'F15C2', 'F15C3', 'F15C4'],
+         ['F16C1', 'F16C2', 'F16C3', 'F16C4'],
+         ['F17C1', 'F17C2', 'F17C3', 'F17C4'],
+         ['F18C1', 'F18C2', 'F18C3', 'F18C4'],
+         ['F19C1', 'F19C2', 'F19C3', 'F19C4'],
+         ['F20C1', 'F20C2', 'F20C3', 'F20C4']
+         ]
 
-
-datos = [['F01C1', 'F01C2', 'F01C3', 'F01C4']] * 20
 opciones = ["1.- Mostrar lista DSN", "2.- Mostrar drivers ODBC", "3.- Consultar", "4.- Insertar", "5.- Eliminar", "6.- Actualizar", "7.- Salir"]
 
 curses.wrapper(menu_principal)

@@ -16,6 +16,7 @@ BLANCO = (255, 255, 255)
 ROJO = (255, 0, 0)
 AZUL = (0, 0, 255)
 VERDE = (0, 255, 0)
+GRIS = (128, 128, 128)
 
 # Configuración del reloj
 reloj = pygame.time.Clock()
@@ -179,6 +180,32 @@ def juego():
         # Actualizar pantalla y reloj
         pygame.display.flip()
         reloj.tick(FPS)
+
+# Función para mostrar ayuda
+def mostrar_ayuda():
+    corriendo = True
+    while corriendo:
+        pantalla.fill(NEGRO)
+        mostrar_texto(pantalla, "Ayuda", fuente, BLANCO, ANCHO // 2 - 50, 50)
+        mostrar_texto(pantalla, "Jugador 1:", fuente, BLANCO, 50, 150)
+        mostrar_texto(pantalla, "Moverse: W, A, S, D", fuente, GRIS, 50, 200)
+        mostrar_texto(pantalla, "Disparar: Espacio", fuente, GRIS, 50, 250)
+
+        mostrar_texto(pantalla, "Jugador 2:", fuente, BLANCO, 50, 350)
+        mostrar_texto(pantalla, "Moverse: Flechas", fuente, GRIS, 50, 400)
+        mostrar_texto(pantalla, "Disparar: Enter", fuente, GRIS, 50, 450)
+
+        mostrar_texto(pantalla, "Presione ESC para volver al menú", fuente, GRIS, 50, 550)
+
+        pygame.display.flip()
+
+        for evento in pygame.event.get():
+            if evento.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if evento.type == pygame.KEYDOWN:
+                if evento.key == pygame.K_ESCAPE:
+                    corriendo = False
 
 # Menú principal
 def menu():
