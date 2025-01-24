@@ -13,6 +13,7 @@ if __name__ == '__main__':
     a = set('abradacabra')
     print(a)
     a.add('g')
+
     print(a)
 
     #Tipo 2: Sets inmutables (No se pueden añadir nuevos elementos)
