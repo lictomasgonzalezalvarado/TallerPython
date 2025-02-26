@@ -1,3 +1,4 @@
+#Argumentos opcionales
 def suma(a:int=0, b:int=0, c:int=0, d:int=0) -> int:
     return a + b + c + d
 

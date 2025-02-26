@@ -1,3 +1,5 @@
+#Argumentos clave valor
+
 def Argumentos(**args):
     if args: #El tipo de dato de argumentos es un diccionario
         for clave,valor in args.items():
